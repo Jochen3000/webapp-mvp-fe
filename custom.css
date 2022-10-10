@@ -1,3 +1,42 @@
-body {
-    background-color: beige;
+/* responsive cards */
+@media only screen and (max-width: 1200px) {
+    .menu-item-text, .logo-name, .account-settings {
+        display: none;
+    }
+
+    .page-grid {
+        grid-template-columns: 117px 1fr;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .menu-item-text, .logo-name, .account-settings {
+        display: block;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .page-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .row-counter-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid-row-60-40, .grid-row-40-60 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 475px) {
+    .row-counter-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .big-text-img-card {
+        flex-direction: column;
+    }
 }
