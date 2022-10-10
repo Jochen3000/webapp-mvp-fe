@@ -18,6 +18,10 @@
         display: none;
     }
 
+    .burger-menu {
+        display: block;
+    }
+
     .page-grid {
         grid-template-columns: 1fr;
     }
