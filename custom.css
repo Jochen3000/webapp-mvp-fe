@@ -39,4 +39,8 @@
     .big-text-img-card {
         flex-direction: column;
     }
+
+    .bottom-section {
+        grid-template-columns: 1fr 1fr;
+    }
 }
