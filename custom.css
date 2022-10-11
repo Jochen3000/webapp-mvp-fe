@@ -1,3 +1,16 @@
+/* 
+*** single page navigation ***
+*/
+
+/* hide sections */
+.view-wallet, .view-analyze, .view-store {
+    display: none;
+}
+
+/* 
+*** responsive with custom breakpoints ***
+*/
+
 /* responsive cards */
 @media only screen and (max-width: 1200px) {
     .menu-item-text, .logo-name, .account-settings {
@@ -10,18 +23,8 @@
 }
 
 @media only screen and (max-width: 1000px) {
-    .menu-item-text, .logo-name, .account-settings {
-        display: block;
-    }
 
-    .sidebar-inner {
-        display: none;
-    }
-
-    .burger-menu {
-        display: block;
-    }
-
+    /* Do some styling for main section */
     .page-grid {
         grid-template-columns: 1fr;
     }
@@ -33,8 +36,52 @@
     .grid-row-60-40, .grid-row-40-60 {
         grid-template-columns: 1fr;
     }
+
+    /* bring back menu labels */
+    .menu-item-text, .account-settings {
+        display: block;
+    }
+
+    /* amend menu for mobile view */
+
+    .logo-container {
+        justify-content: center;
+    }
+
+    .sidebar {
+        justify-content: stretch;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .sidebar-inner {
+        position: static;
+    }
+
+    /*
+    *** mobile menu ***
+    */
+
+    /* hide the menu */
+    .sidebar-inner {
+        display: none;
+    }
+
+    /* click burger */
+
+    /* 
+    - when burger clicked show menu
+    - hide main
+
+    - when menu item clicked hide menu
+    - show main 
+    */
+
 }
 
+/* adapt main cards for mobile screen */
 @media only screen and (max-width: 475px) {
     .row-counter-cards {
         grid-template-columns: 1fr;
