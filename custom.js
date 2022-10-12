@@ -1,4 +1,23 @@
 /**
+ * Mobile Menu
+ */
+
+const burgerMenu = document.querySelector('.burger-menu');
+const sidebarMenu = document.querySelector('.sidebar-inner');
+let sidebarVisible = false;
+
+burgerMenu.addEventListener("click", () => {
+    if (!sidebarVisible) {
+        sidebarMenu.classList.add('display');
+        sidebarVisible = true;
+    }
+    else {
+        sidebarMenu.classList.remove('display');
+        sidebarVisible = false;
+    }
+});
+
+/**
  * single page navigation
  */
 
@@ -27,8 +46,14 @@ for (let i = 0; i < menuItem.length; i++) {
         // display selected 
         menuItem[i].classList.add('active');
         mainViews[i].classList.remove('hide');
+        // close menu on mobile
+        if (sidebarVisible) {
+            sidebarMenu.classList.remove('display');
+            sidebarVisible = false;
+        }
     });
 }
+
 
 
 

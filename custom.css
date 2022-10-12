@@ -23,6 +23,11 @@
 *** responsive with custom breakpoints ***
 */
 
+/* hide burger menu on desktop */
+.burger-menu {
+    display: none;
+}
+
 /* responsive cards */
 @media only screen and (max-width: 1200px) {
     .menu-item-text, .logo-name, .account-settings {
@@ -81,16 +86,9 @@
         display: none;
     }
 
-    /* click burger */
-
-    /* 
-    - when burger clicked show menu
-    - hide main
-
-    - when menu item clicked hide menu
-    - show main 
-    */
-
+    .sidebar .display {
+        display: block;
+    }
 }
 
 /* adapt main cards for mobile screen */
