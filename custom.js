@@ -9,23 +9,43 @@ const viewAnalyze = document.querySelector('.view-analyze');
 const viewWallet = document.querySelector('.view-wallet');
 const viewStore = document.querySelector('.view-store');
 
+//set dashboard menu as active
+menuItem[3].classList.add('active');
+
+
 // make menu items clickable
-for (let i = 0; i < menuItem.length; i++) {
-    menuItem[i].addEventListener('click', () => {
+menuItem.forEach((item) => {
+    item.addEventListener("click", (menuclick) => {
         // hide all views
         mainViews.forEach((item) => {
             item.classList.add('hide');
-        })
+        });
+        // set all menu items to unfocused
+        menuItem.forEach((item) => {
+            item.classList.remove('active');
+        });
+        console.log('hallo', item);
         console.log('huhu', mainViews);
-
-        // show selected view
-        if (menuItem[i] = 0) {
-
-        }
-        console.log('hallo', menuItem[i]);
     });
+})
 
-}
+
+// for (let i = 0; i < menuItem.length; i++) {
+//     menuItem[i].addEventListener('click', () => {
+//         // hide all views
+//         mainViews.forEach((item) => {
+//             item.classList.add('hide');
+//         })
+//         console.log('huhu', mainViews);
+
+//         // show selected view
+//         if (menuItem[i] = 0) {
+
+//         }
+//         console.log('hallo', menuItem[i]);
+//     });
+
+// }
 
 
 

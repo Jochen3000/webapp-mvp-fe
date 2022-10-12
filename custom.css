@@ -2,6 +2,23 @@
 *** single page navigation ***
 */
 
+/* highlight active menu */
+.menu-1 .active {
+    border: 2px solid red;
+}
+
+.active .icon-container {
+    background-color: #003865;
+}
+
+.active .menu-item-text {
+    color: #003865;
+}
+
+.active .icon-container img {
+    filter: invert(97%) sepia(60%) saturate(0%) hue-rotate(35deg) brightness(109%) contrast(101%);
+}
+
 /* hide sections */
 .view-wallet, .view-analyze, .view-store {
     display: none;
