@@ -105,3 +105,10 @@
         grid-template-columns: 1fr 1fr;
     }
 }
+
+/*
+*** style chart canvas ***
+*/
+#barChart {
+    background-image: linear-gradient(#34385D, #34385D);
+}
