@@ -28,8 +28,13 @@ const viewAnalyze = document.querySelector('.view-analyze');
 const viewWallet = document.querySelector('.view-wallet');
 const viewStore = document.querySelector('.view-store');
 
-//set dashboard menu as active
+//initial state: set dashboard menu as active
 menuItem[0].classList.add('active');
+// hide all views apart from dashboard
+        mainViews.forEach((item) => {
+           item.classList.add('hide');
+        });
+        mainViews[0].classList.remove('hide');
 
 
 // make menu items clickable
